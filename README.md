@@ -2,28 +2,120 @@
 
 # 📚 Strategies · OMA Quant
 
-### 216 libros de finanzas cuantitativas. Un motor antisobreajuste. Solo sobreviven las estrategias que aguantan.
+### 216 quant finance books. One anti-overfitting engine. Only the strategies that hold up survive.
 
 <p>
-  <a href="https://www.omaquant.com/pricing?cupon=OMAQUANT-10"><img alt="10 % de descuento con OMAQUANT-10" src="https://img.shields.io/badge/CUP%C3%93N-OMAQUANT--10%20%C2%B7%20%E2%88%9210%25-C9A227?style=for-the-badge"></a>
-  <a href="https://github.com/HMphysics/Strategies-OMA-Quant/stargazers"><img alt="Estrellas" src="https://img.shields.io/github/stars/HMphysics/Strategies-OMA-Quant?style=for-the-badge&color=0B1F33&label=%E2%AD%90%20estrellas"></a>
+  <a href="https://www.omaquant.com/pricing?cupon=OMAQUANT-10"><img alt="10% off with OMAQUANT-10" src="https://img.shields.io/badge/COUPON-OMAQUANT--10%20%C2%B7%20%E2%88%9210%25-C9A227?style=for-the-badge"></a>
+  <a href="https://github.com/HMphysics/Strategies-OMA-Quant/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/HMphysics/Strategies-OMA-Quant?style=for-the-badge&color=0B1F33&label=%E2%AD%90%20stars"></a>
   <a href="https://www.omaquant.com"><img alt="omaquant.com" src="https://img.shields.io/badge/omaquant.com-0B1F33?style=for-the-badge"></a>
-  <a href="https://discord.gg/Y4eygGWGS5"><img alt="Discord" src="https://img.shields.io/badge/Discord-comunidad-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
+  <a href="https://discord.gg/Y4eygGWGS5"><img alt="Discord" src="https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
-**[⭐ Dale una estrella](https://github.com/HMphysics/Strategies-OMA-Quant)** · **[🔁 Compártelo en X](https://x.com/intent/post?text=Est%C3%A1n%20leyendo%20216%20libros%20quant%20y%20pasando%20cada%20estrategia%20por%20un%20motor%20antisobreajuste.%20Solo%20publican%20las%20que%20sobreviven%20%F0%9F%93%9A%F0%9F%93%88&url=https%3A%2F%2Fgithub.com%2FHMphysics%2FStrategies-OMA-Quant)** · **[🎟️ Usa el cupón](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+**[⭐ Star it](https://github.com/HMphysics/Strategies-OMA-Quant)** · **[🔁 Share it on X](https://x.com/intent/post?text=They%27re%20reading%20216%20quant%20books%20and%20running%20every%20strategy%20through%20an%20anti-overfitting%20engine.%20Only%20the%20survivors%20get%20published%20%F0%9F%93%9A%F0%9F%93%88&url=https%3A%2F%2Fgithub.com%2FHMphysics%2FStrategies-OMA-Quant)** · **[🎟️ Use the coupon](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+
+**[English](#-english)** · **[Español](#-español)**
 
 </div>
 
 ---
 
-## 🎟️ Un 10 % para ti si lo compartes
+## 🇬🇧 English
+
+### 🎟️ 10% off for you if you share it
+
+If this repo is useful to you, **star it ⭐ and share it**. In return you get **10% off any OMA Quant product** with the code:
+
+<div align="center">
+
+#### `OMAQUANT-10`
+
+**👉 [Open OMA with the coupon already applied](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+
+</div>
+
+The link remembers the coupon and applies it at checkout, even if you need to create an account first.
+
+### 🧭 What this is
+
+Someone shared a shelf of **216 quant finance books**, all free to read from their authors, universities or publishers ([hft.md/quant-books](https://hft.md/quant-books/)).
+
+We are reading them **one by one**. From each book we take the ideas that can become a strategy, code them on real market data and run them through **YGGDRASIL**, our audit engine. The engine doesn't hunt for the best-looking curve. It freezes the pass criteria **before** seeing any result, measures how much of the performance is luck, and penalises every extra attempt.
+
+> Testing 3,000 strategies is easy. Knowing which of the winners are just luck is the hard part.
+
+Each book is an episode of the series. We tell the story live on X and on Substack.
+
+### 🏆 Strategies that passed the audit
+
+| # | Strategy | Source book | Type | Assets | Sharpe | Max DD | Card |
+|:-:|---|---|---|---|:-:|:-:|:-:|
+| | *Coming soon* | *Book 1 · Portfolio Optimization (Palomar, 2025)* | | | | | |
+
+> We only publish **what** each strategy does and **how it scored** in the audit. The exact rules, the code and the live signals are for **[OMA Capital](https://www.omaquant.com/capital?cupon=OMAQUANT-10)** members.
+
+### 📖 Series progress
+
+| Book | Author | Ideas tested | Passed the audit | Episode |
+|:-:|---|:-:|:-:|:-:|
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | in progress | – | – |
+
+<sub>216 books in total. Reading order: first the books that propose strategies directly, then the techniques, and the foundations last.</sub>
+
+### 🔬 How we audit (without showing the engine)
+
+```
+ Book ──► Idea ──► Rules fixed ──► Criteria frozen ──► YGGDRASIL ──► Verdict
+                   (before any      (hashed, no         nulls · stress ·
+                    data is seen)    way back)           overfitting · regimes
+```
+
+- **Rules first.** Parameters and pass thresholds are written down and frozen before the first result is seen.
+- **Against randomness.** Every strategy competes with randomised versions of itself and with buy-and-hold.
+- **Every attempt counts.** The more variants we try, the higher the bar (Deflated Sharpe Ratio and probability of backtest overfitting).
+- **Stress.** Costs multiplied, late execution, regime changes.
+
+Want to run **your own strategies** through the engine? That's **[OMA Lab](https://www.omaquant.com/lab?cupon=OMAQUANT-10)**.
+
+### 🧩 OMA Quant
+
+**A quantitative macro research house for independent investors.**
+
+| Product | What it is |
+|---|---|
+| **[OMA Capital](https://www.omaquant.com/capital?cupon=OMAQUANT-10)** | Live signals from our 25 strategies on Discord, with a members' community and live analysis. Includes 12 intraday strategies for prop firms and funded accounts. |
+| **[OMA Research](https://www.omaquant.com/research?cupon=OMAQUANT-10)** | Macro and derivatives reports built on proprietary indicators, options flow, GEX and VIX. |
+| **[OMA Terminal](https://www.omaquant.com/terminal?cupon=OMAQUANT-10)** | 3,000+ market time series and our proprietary indicators in one place. |
+| **[OMA Brain](https://www.omaquant.com/brain?cupon=OMAQUANT-10)** | About 1,800 quant research notes to plug into Claude, ChatGPT or your own agents. |
+| **[OMA Lab](https://www.omaquant.com/lab?cupon=OMAQUANT-10)** | The YGGDRASIL audit engine on your own strategies. |
+| **[OMA Suite](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)** | All of the above in one subscription. |
+
+<div align="center">
+
+**🎟️ `OMAQUANT-10` → [10% off any of them](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+
+</div>
+
+### 🔔 Follow along
+
+- ⭐ **Star the repo** to see each new strategy as it lands (use *Watch → Custom → Releases* for notifications).
+- 💬 **[Discord community](https://discord.gg/Y4eygGWGS5)**
+- 🌐 **[omaquant.com](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+
+<sub>
+The books belong to their authors and publishers. None is hosted or redistributed here: each book is cited with its official link. This repository is educational content and is not financial advice. Backtest results, however rigorous, do not guarantee future returns. Investing involves risk of loss.
+</sub>
+
+---
+
+## 🇪🇸 Español
+
+### 🎟️ Un 10 % para ti si lo compartes
 
 Si este repo te parece útil, **dale una ⭐ y compártelo**. A cambio tienes un **10 % de descuento en cualquier producto de OMA Quant** con el cupón:
 
 <div align="center">
 
-### `OMAQUANT-10`
+#### `OMAQUANT-10`
 
 **👉 [Entra con el cupón ya aplicado](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
@@ -31,9 +123,9 @@ Si este repo te parece útil, **dale una ⭐ y compártelo**. A cambio tienes un
 
 El enlace guarda el cupón y lo aplica solo al pagar, aunque antes tengas que crearte la cuenta.
 
----
+**[🔁 Compártelo en X](https://x.com/intent/post?text=Est%C3%A1n%20leyendo%20216%20libros%20quant%20y%20pasando%20cada%20estrategia%20por%20un%20motor%20antisobreajuste.%20Solo%20publican%20las%20que%20sobreviven%20%F0%9F%93%9A%F0%9F%93%88&url=https%3A%2F%2Fgithub.com%2FHMphysics%2FStrategies-OMA-Quant)**
 
-## 🧭 Qué es esto
+### 🧭 Qué es esto
 
 Alguien publicó una estantería con **216 libros de finanzas cuantitativas**, todos de lectura gratuita desde la web de sus autores, universidades o editoriales ([hft.md/quant-books](https://hft.md/quant-books/)).
 
@@ -43,7 +135,7 @@ Nosotros nos los vamos a leer **uno a uno**. De cada libro sacamos las ideas que
 
 Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Substack.
 
-## 🏆 Estrategias que han superado la auditoría
+### 🏆 Estrategias que han superado la auditoría
 
 | # | Estrategia | Libro de origen | Tipo | Activos | Sharpe | Máx. DD | Ficha |
 |:-:|---|---|---|---|:-:|:-:|:-:|
@@ -51,15 +143,15 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Su
 
 > Aquí solo publicamos **qué hace** cada estrategia y **cómo le ha ido** en la auditoría. Las reglas, el código y las señales en directo son para los miembros de **[OMA Capital](https://www.omaquant.com/capital?cupon=OMAQUANT-10)**.
 
-## 📖 Progreso de la serie
+### 📖 Progreso de la serie
 
 | Libro | Autor | Ideas probadas | Superan la auditoría | Episodio |
 |:-:|---|:-:|:-:|:-:|
 | 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | en curso | – | – |
 
-<sub>216 libros en total · orden de lectura: primero los que proponen estrategias directas, luego las técnicas y al final los fundamentos.</sub>
+<sub>216 libros en total. Orden de lectura: primero los que proponen estrategias directas, luego las técnicas y al final los fundamentos.</sub>
 
-## 🔬 Cómo auditamos (sin enseñar el motor)
+### 🔬 Cómo auditamos (sin enseñar el motor)
 
 ```
  Libro ──► Idea ──► Reglas fijadas ──► Criterios congelados ──► YGGDRASIL ──► Veredicto
@@ -74,7 +166,7 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Su
 
 ¿Quieres pasar **tus propias estrategias** por el motor? Eso es **[OMA Lab](https://www.omaquant.com/lab?cupon=OMAQUANT-10)**.
 
-## 🧩 OMA Quant
+### 🧩 OMA Quant
 
 **Una casa de research macro cuantitativo para inversores independientes.**
 
@@ -93,24 +185,11 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Su
 
 </div>
 
-## 🔔 Síguelo
+### 🔔 Síguelo
 
 - ⭐ **Dale una estrella al repo** para enterarte cada vez que entra una estrategia nueva (usa *Watch → Custom → Releases* si quieres aviso).
 - 💬 **[Comunidad en Discord](https://discord.gg/Y4eygGWGS5)**
 - 🌐 **[omaquant.com](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
-
-<details>
-<summary><b>🇬🇧 English</b></summary>
-
-<br>
-
-**Strategies · OMA Quant**: we are reading all 216 free quant books on [hft.md/quant-books](https://hft.md/quant-books/), one by one. Every idea that can be turned into a strategy is coded on real data and audited by **YGGDRASIL**, our anti-overfitting engine: rules and pass criteria are frozen before looking at any result, every trial is counted, and each strategy has to beat randomised versions of itself. Only the survivors are listed here: what they do and how they scored, not how they are built.
-
-⭐ **Star and share the repo** and get **10 % off any OMA Quant product** with the code **`OMAQUANT-10`**. **[This link applies it for you](https://www.omaquant.com/pricing?cupon=OMAQUANT-10).**
-
-</details>
-
----
 
 <sub>
 Los libros pertenecen a sus autores y editoriales. Aquí no se aloja ni se redistribuye ninguno: cada libro se cita con su enlace oficial. Este repositorio es contenido educativo y no constituye asesoramiento financiero. Los resultados de un backtest, aunque sea riguroso, no garantizan rendimientos futuros. Invertir conlleva riesgo de pérdida.
