@@ -54,6 +54,14 @@ Each book is an episode of the series. We tell the story live on [X (@_HMPhysics
 
 > We only publish **what** each strategy does and **how it scored** in the audit. The exact rules, the code and the live signals are for **[OMA Capital](https://www.omaquant.com/capital?cupon=OMAQUANT-10)** members.
 
+### 📂 Strategy files
+
+Every strategy we audit gets a full file here: the idea, how it plays, the record, what the engine checked and, at the end, the verdict.
+
+| # | Strategy | Source book | File |
+|:-:|---|---|:-:|
+| 1 | Risk parity across eight asset classes | Palomar, *Portfolio Optimization* (2025) | [open](strategies/001-risk-parity) |
+
 ### 📖 Series progress
 
 | Book | Author | Ideas tested | Passed the audit | Episode |
@@ -145,6 +153,14 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en [X (@_HMP
 | | *Próximamente* | *Libro 1 · Portfolio Optimization (Palomar, 2025)* | | | | | |
 
 > Aquí solo publicamos **qué hace** cada estrategia y **cómo le ha ido** en la auditoría. Las reglas, el código y las señales en directo son para los miembros de **[OMA Capital](https://www.omaquant.com/capital?cupon=OMAQUANT-10)**.
+
+### 📂 Fichas de estrategias
+
+Cada estrategia que auditamos tiene aquí su ficha completa: la idea, cómo juega, los resultados, qué comprobó el motor y, al final, el veredicto.
+
+| # | Estrategia | Libro de origen | Ficha |
+|:-:|---|---|:-:|
+| 1 | Risk parity sobre ocho clases de activo | Palomar, *Portfolio Optimization* (2025) | [abrir](strategies/001-risk-parity) |
 
 ### 📖 Progreso de la serie
 
