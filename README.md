@@ -8,10 +8,11 @@
   <a href="https://www.omaquant.com/pricing?cupon=OMAQUANT-10"><img alt="10% off with OMAQUANT-10" src="https://img.shields.io/badge/COUPON-OMAQUANT--10%20%C2%B7%20%E2%88%9210%25-C9A227?style=for-the-badge"></a>
   <a href="https://github.com/HMphysics/Strategies-OMA-Quant/stargazers"><img alt="Stars" src="https://img.shields.io/github/stars/HMphysics/Strategies-OMA-Quant?style=for-the-badge&color=0B1F33&label=%E2%AD%90%20stars"></a>
   <a href="https://www.omaquant.com"><img alt="omaquant.com" src="https://img.shields.io/badge/omaquant.com-0B1F33?style=for-the-badge"></a>
+  <a href="https://x.com/_HMPhysics_"><img alt="Follow @_HMPhysics_ on X" src="https://img.shields.io/badge/Follow-@__HMPhysics__-000000?style=for-the-badge&logo=x&logoColor=white"></a>
   <a href="https://discord.gg/Y4eygGWGS5"><img alt="Discord" src="https://img.shields.io/badge/Discord-community-5865F2?style=for-the-badge&logo=discord&logoColor=white"></a>
 </p>
 
-**[⭐ Star it](https://github.com/HMphysics/Strategies-OMA-Quant)** · **[🔁 Share it on X](https://x.com/intent/post?text=They%27re%20reading%20216%20quant%20books%20and%20running%20every%20strategy%20through%20an%20anti-overfitting%20engine.%20Only%20the%20survivors%20get%20published%20%F0%9F%93%9A%F0%9F%93%88&url=https%3A%2F%2Fgithub.com%2FHMphysics%2FStrategies-OMA-Quant)** · **[🎟️ Use the coupon](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+**[⭐ Star it](https://github.com/HMphysics/Strategies-OMA-Quant)** · **[𝕏 Follow @_HMPhysics_](https://x.com/_HMPhysics_)** · **[🔁 Share it on X](https://x.com/intent/post?text=They%27re%20reading%20216%20quant%20books%20and%20running%20every%20strategy%20through%20an%20anti-overfitting%20engine.%20Only%20the%20survivors%20get%20published%20%F0%9F%93%9A%F0%9F%93%88&url=https%3A%2F%2Fgithub.com%2FHMphysics%2FStrategies-OMA-Quant)** · **[🎟️ Use the coupon](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
 **[English](#-english)** · **[Español](#-español)**
 
@@ -43,7 +44,7 @@ We are reading them **one by one**. From each book we take the ideas that can be
 
 > Testing 3,000 strategies is easy. Knowing which of the winners are just luck is the hard part.
 
-Each book is an episode of the series. We tell the story live on X and on Substack.
+Each book is an episode of the series. We tell the story live on [X (@_HMPhysics_)](https://x.com/_HMPhysics_) and on [Substack](https://hmaquant.substack.com/s/216-quant-books).
 
 ### 🏆 Strategies that passed the audit
 
@@ -57,7 +58,7 @@ Each book is an episode of the series. We tell the story live on X and on Substa
 
 | Book | Author | Ideas tested | Passed the audit | Episode |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | in progress | – | – |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | in progress | – | [Episode 0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) |
 
 <sub>216 books in total. Reading order: first the books that propose strategies directly, then the techniques, and the foundations last.</sub>
 
@@ -98,6 +99,8 @@ Want to run **your own strategies** through the engine? That's **[OMA Lab](https
 ### 🔔 Follow along
 
 - ⭐ **Star the repo** to see each new strategy as it lands (use *Watch → Custom → Releases* for notifications).
+- 𝕏 **[Follow @_HMPhysics_ on X](https://x.com/_HMPhysics_)**: the series is told live there, book by book.
+- 📰 **[Substack · 216 QUANT BOOKS](https://hmaquant.substack.com/s/216-quant-books)**: one long-form episode per book.
 - 💬 **[Discord community](https://discord.gg/Y4eygGWGS5)**
 - 🌐 **[omaquant.com](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
@@ -133,7 +136,7 @@ Nosotros nos los vamos a leer **uno a uno**. De cada libro sacamos las ideas que
 
 > Probar 3.000 estrategias es fácil. Lo difícil es saber cuáles de las que salen bien son suerte.
 
-Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Substack.
+Cada libro es un episodio de la serie. Lo vamos contando en directo en [X (@_HMPhysics_)](https://x.com/_HMPhysics_) y en [Substack](https://hmaquant.substack.com/s/216-quant-books).
 
 ### 🏆 Estrategias que han superado la auditoría
 
@@ -147,7 +150,7 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Su
 
 | Libro | Autor | Ideas probadas | Superan la auditoría | Episodio |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | en curso | – | – |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | en curso | – | [Episodio 0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) |
 
 <sub>216 libros en total. Orden de lectura: primero los que proponen estrategias directas, luego las técnicas y al final los fundamentos.</sub>
 
@@ -188,6 +191,8 @@ Cada libro es un episodio de la serie. Lo vamos contando en directo en X y en Su
 ### 🔔 Síguelo
 
 - ⭐ **Dale una estrella al repo** para enterarte cada vez que entra una estrategia nueva (usa *Watch → Custom → Releases* si quieres aviso).
+- 𝕏 **[Sígueme en X: @_HMPhysics_](https://x.com/_HMPhysics_)**: allí cuento la serie en directo, libro a libro.
+- 📰 **[Substack · 216 QUANT BOOKS](https://hmaquant.substack.com/s/216-quant-books)**: un episodio largo por libro.
 - 💬 **[Comunidad en Discord](https://discord.gg/Y4eygGWGS5)**
 - 🌐 **[omaquant.com](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
