@@ -61,6 +61,7 @@ Every strategy we audit gets a full file here: the idea, how it plays, the recor
 | # | Strategy | Source book | File |
 |:-:|---|---|:-:|
 | 1 | Risk parity across eight asset classes | Palomar, *Portfolio Optimization* (2025) | [open](strategies/001-risk-parity) |
+| 2 | Pairs trading Australia against Canada (EWA/EWC) | Palomar, *Portfolio Optimization* (2025) | [open](strategies/002-pairs-ewa-ewc) |
 
 ### 📖 Series progress
 
@@ -161,6 +162,7 @@ Cada estrategia que auditamos tiene aquí su ficha completa: la idea, cómo jueg
 | # | Estrategia | Libro de origen | Ficha |
 |:-:|---|---|:-:|
 | 1 | Risk parity sobre ocho clases de activo | Palomar, *Portfolio Optimization* (2025) | [abrir](strategies/001-risk-parity) |
+| 2 | Pairs trading Australia contra Canadá (EWA/EWC) | Palomar, *Portfolio Optimization* (2025) | [abrir](strategies/002-pairs-ewa-ewc) |
 
 ### 📖 Progreso de la serie
 

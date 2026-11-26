@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pairs EWA/EWC · Strategy File 02</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: an audit dossier. One narrow reading column, figures break wider, a stamped verdict up top.
+   Single deliberate dark look (OMA navy + gold), every color set explicitly. */
+:root {
+  --ink: #0b1626;        /* page ground, OMA navy */
+  --panel: #101f34;      /* raised surfaces */
+  --line: #22344f;       /* hairlines */
+  --text: #e9edf2;
+  --muted: #93a3b8;
+  --gold: #c9a227;       /* accent: the strategy */
+  --pass: #2fae86;
+  --fail: #e5534b;
+  --mid: #f2c94c;        /* middle-ground verdict */
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ink); color: var(--text); font: 400 1rem/1.65 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 3.5rem; }
+.col { max-width: 68ch; }
+a { color: var(--gold); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); line-height: 1.02; font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font: 500 0.78rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+.stack { display: grid; gap: 1rem; }
+
+/* hero */
+.hero { display: grid; gap: 1.4rem; }
+.hero-top { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start; justify-content: space-between; }
+.hero-top > div { min-width: 0; flex: 1 1 520px; display: grid; gap: 1rem; }
+.lede { font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+.stamp { flex: 0 0 auto; border: 2px solid var(--fail); color: var(--fail); padding: 0.7rem 1rem; transform: rotate(-3deg);
+  font: 600 0.8rem/1.35 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
+.stamp.mid { border-color: var(--mid); color: var(--mid); }
+.stamp b { display: block; font: 700 1.6rem/1.1 var(--display); letter-spacing: 0.08em; }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.fig { background: var(--panel); padding: 1rem 1.1rem; display: grid; gap: 0.2rem; }
+.fig .k { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+.fig .v { font: 600 1.9rem/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.fig .s { font-size: 0.85rem; color: var(--muted); }
+.gold { color: var(--gold); }
+
+/* figures */
+figure { margin: 0; display: grid; gap: 0.6rem; }
+figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+figcaption { font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; align-items: start; }
+.two > * { min-width: 0; }
+
+/* table */
+.tablebox { overflow-x: auto; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-variant-numeric: tabular-nums; }
+th, td { padding: 0.6rem 0.8rem; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+thead th { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); background: var(--panel); }
+tbody tr:last-child td { border-bottom: 0; }
+tr.us td { color: var(--gold); font-weight: 600; }
+td.grp { border-left: 1px solid var(--line); }
+
+/* pros/cons */
+.ledger { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.ledger section { border-top: 3px solid var(--pass); padding-top: 1rem; display: grid; gap: 0.8rem; min-width: 0; }
+.ledger section.bad { border-top-color: var(--fail); }
+.ledger ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.6rem; }
+
+/* engine list */
+.checks { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.checks li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.8rem; align-items: baseline; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.tag { font: 600 0.7rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.15rem 0.4rem; text-align: center; }
+.tag.f { color: var(--fail); border: 1px solid var(--fail); }
+.tag.p { color: var(--pass); border: 1px solid var(--pass); }
+
+/* verdict */
+.verdict { border: 1px solid var(--line); background: var(--panel); padding: 1.6rem; display: grid; gap: 1rem; }
+.verdict h2 { color: var(--gold); }
+.verdict-head { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: center; justify-content: space-between; }
+.verdict-head > .stack { flex: 1 1 420px; min-width: 0; }
+
+/* cta */
+.cta { display: grid; gap: 1rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+.btns { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.1rem; border: 1px solid var(--gold); color: var(--text); text-decoration: none; font-weight: 600; }
+.btn.primary { background: var(--gold); color: var(--ink); }
+.code { font: 600 1rem var(--mono); color: var(--gold); letter-spacing: 0.06em; }
+.fine { font-size: 0.8rem; color: var(--muted); max-width: 80ch; }
+@media (prefers-reduced-motion: no-preference) { .stamp { transition: transform .3s; } .stamp:hover { transform: rotate(0deg); } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">216 Quant Books · Episode 2 · Book 1 · Strategy 2 of the series</p>
+    <div class="hero-top">
+      <div>
+        <h1>Pairs trading Australia against Canada</h1>
+        <p class="lede">The worked example from Daniel P. Palomar's <em>Portfolio Optimization: Theory and Application</em> (Cambridge, 2025). Two commodity economies, one spread, and the question of whether the gap pays once you trade it for real.</p>
+      </div>
+    </div>
+    <div class="figures">
+      <div class="fig"><span class="k">Sharpe, net</span><span class="v gold">0.60</span><span class="s">SPY 0.41</span></div>
+      <div class="fig"><span class="k">Max drawdown</span><span class="v gold">−16%</span><span class="s">SPY −55%</span></div>
+      <div class="fig"><span class="k">Beta to SPY</span><span class="v">0.03</span><span class="s">market neutral</span></div>
+      <div class="fig"><span class="k">Sharpe at 5x costs</span><span class="v">0.04</span><span class="s">one day late: 0.28</span></div>
+    </div>
+    <p class="fine">Sample 1 June 2000 to 31 December 2025 (6,435 sessions), 10 bp per side, executed at the next close, gross exposure 1, no leverage. Same engine and costs for every line.</p>
+  </header>
+
+  <section class="stack">
+    <p class="eyebrow">How it plays</p>
+    <h2>Buy the laggard, short the leader, wait</h2>
+    <div class="col stack">
+      <p>Australia and Canada live off the same things: metals, energy, banks. Their stock markets, bought through EWA and EWC, drift together over the years. When one runs ahead, the gap usually closes.</p>
+      <p>Every day the strategy regresses log EWA on log EWC over the last two years to get the hedge ratio, builds the spread and measures how stretched it is with a six-month z-score. <strong>Above +1 it shorts the spread, below −1 it buys it, and it gets out when the z-score crosses zero.</strong> About 11 round trips a year.</p>
+    </div>
+    <div class="two">
+      <figure>
+        <img src="img/01_el_par.png" alt="EWA and EWC growth of one dollar on top, the spread's z-score with long and short periods shaded below" width="1200" height="675" loading="lazy">
+        <figcaption>Top: the two ETFs. Bottom: the z-score, green while long the spread, red while short.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/pares.gif" alt="Animation of the z-score oscillating with the position shaded, next to the strategy's growth of one dollar" width="960" height="540" loading="lazy">
+        <figcaption>2016 to 2026, trade by trade: every stretch of the spread is a position, every return to zero a close.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stack">
+    <p class="eyebrow">The hedge has to move</p>
+    <h2>Freeze it and the pair falls apart</h2>
+    <div class="col stack">
+      <p>The book's first experiment estimates the hedge ratio once and keeps it. We ran it too. The spread drifts away for years, the strategy keeps betting on a return that never comes, and it ends with a Sharpe of 0.13 and a 56% loss at its worst. Re-estimating the hedge every day is what holds the pair together.</p>
+    </div>
+    <figure>
+      <img src="img/02_cobertura.png" alt="Left: the spread with a fixed hedge drifting upwards against the rolling-hedge spread around zero. Right: growth of one dollar for both" width="1200" height="675" loading="lazy">
+      <figcaption>Same pair, same signal. The only difference is whether the hedge ratio keeps up.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stack">
+    <p class="eyebrow">The record</p>
+    <h2>Market neutral, and it shows</h2>
+    <figure>
+      <img src="img/03_curva.png" alt="Log chart of the growth of one dollar for the pairs strategy and SPY, with drawdowns below" width="1200" height="675" loading="lazy">
+      <figcaption>Growth of 1, log scale, with drawdowns underneath. The shaded strip is 2026: data that played no part in designing anything.</figcaption>
+    </figure>
+    <div class="tablebox">
+      <table>
+        <thead>
+          <tr><th scope="col">Version</th><th scope="col">Sharpe</th><th scope="col">CAGR</th><th scope="col">Vol</th><th scope="col">Max DD</th><th scope="col" class="grp">2026 Sharpe</th><th scope="col">2026 Max DD</th></tr>
+        </thead>
+        <tbody>
+          <tr class="us"><td>Pairs EWA/EWC, rolling hedge</td><td>0.60</td><td>6.6%</td><td>8.4%</td><td>−15.7%</td><td class="grp">0.17</td><td>−5.9%</td></tr>
+          <tr><td>Same signal, linear sizing</td><td>0.55</td><td>6.1%</td><td>8.0%</td><td>−15.6%</td><td class="grp">0.52</td><td>−6.4%</td></tr>
+          <tr><td>Fixed hedge (the book's first test)</td><td>0.13</td><td>2.5%</td><td>17.0%</td><td>−55.5%</td><td class="grp">0.52</td><td>−7.0%</td></tr>
+          <tr><td>SPY, buy and hold</td><td>0.41</td><td>8.2%</td><td>19.2%</td><td>−55.2%</td><td class="grp">0.98</td><td>−8.9%</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">2000–2025 sample unless marked. 2026 runs from January to October. Sharpe is over the T-bill rate.</p>
+  </section>
+
+  <section class="stack">
+    <p class="eyebrow">What the engine checked</p>
+    <h2>58 checks, frozen before the first run</h2>
+    <div class="col stack">
+      <p>YGGDRASIL is the audit engine behind this series. The rules and the pass thresholds were written down and hashed before a single backtest ran, and every variant we looked at counts against us.</p>
+    </div>
+    <div class="two">
+      <figure>
+        <img src="img/05_motor.png" alt="Bar chart of passed and failed checks per audit block" width="1200" height="675" loading="lazy">
+        <figcaption>Integrity, randomness tests and limits come out clean. Execution stress is where it breaks.</figcaption>
+      </figure>
+      <ul class="checks">
+        <li><span class="tag p">pass</span><span><strong>Deflated Sharpe 0.98.</strong> After counting every variant, the edge is very unlikely to be luck.</span></li>
+        <li><span class="tag p">pass</span><span><strong>Alpha 4.7% a year, t = 3.3, beta 0.03.</strong> Returns that don't come from the market.</span></li>
+        <li><span class="tag p">pass</span><span><strong>Timing.</strong> Shuffle or shift the positions and the Sharpe goes negative. The edge is in when it trades.</span></li>
+        <li><span class="tag f">fail</span><span><strong>Sharpe 0.60 against a bar of 0.8.</strong></span></li>
+        <li><span class="tag f">fail</span><span><strong>Execution.</strong> One day late: 0.28, because the spread snaps back fast. Costs ×5 give 0.04, though the edge breaks even at 53 bp per side, far above what these ETFs really cost.</span></li>
+        <li><span class="tag f">fail</span><span><strong>Overfitting probability 0.54–0.64.</strong> A two-year hedge window works; one or three years don't.</span></li>
+      </ul>
+    </div>
+    <figure>
+      <img src="img/04_friccion.png" alt="Bar chart of the Sharpe ratio under no costs, 10, 20, 50 and 100 basis points, and one day late" width="1200" height="675" loading="lazy">
+      <figcaption>Same signal, different execution. With ~12x turnover a year, every basis point is paid many times over.</figcaption>
+    </figure>
+  </section>
+
+  <section class="ledger" aria-label="Strengths and weaknesses">
+    <section>
+      <h3>What it does well</h3>
+      <ul>
+        <li>Better Sharpe than SPY over 25 years (0.60 against 0.41) with a quarter of the worst fall.</li>
+        <li>Truly market neutral: beta 0.03, correlation 0.08. 2008 was its best year.</li>
+        <li>Positive in 19 of 26 years.</li>
+        <li>The cleanest statistical edge of the series so far: deflated Sharpe 0.98 and a significant alpha.</li>
+      </ul>
+    </section>
+    <section class="bad">
+      <h3>Where it falls short</h3>
+      <ul>
+        <li>Speed matters: trade one day late and more than half the Sharpe is gone.</li>
+        <li>It hinges on one hedge window. Change two years to one or three and the Sharpe drops to 0.36–0.39.</li>
+        <li>Long dead spells: a rolling-year Sharpe below zero for 356 sessions in a row around 2013, and 2026 so far is nearly flat.</li>
+        <li>The book's own first version, with a fixed hedge, would have lost more than half the money.</li>
+      </ul>
+    </section>
+  </section>
+
+  <section class="verdict">
+    <div class="verdict-head">
+      <div class="stack">
+        <p class="eyebrow">The verdict</p>
+        <h2>A middle-ground strategy.</h2>
+      </div>
+      <div class="stamp mid" aria-label="Verdict: middle ground, below the YGGDRASIL bar">Audited by YGGDRASIL<b>Middle ground</b>below the bar · strategy 2</div>
+    </div>
+    <p>The pair does what the book says: a market-neutral spread that keeps coming back, with a statistical edge that survives every randomness test we threw at it. It's the best lesson in the book on why a hedge has to move.</p>
+    <p>It doesn't clear YGGDRASIL's bar and it doesn't convince us, but it isn't a bad strategy either. Some of the tests that sink it are harsh on a pair of liquid ETFs. What holds it back is the rest: a Sharpe below our 0.8 bar, a single hedge window that works, and an edge that fades fast if you trade late. Worth knowing and worth studying, not quite worth our capital.</p>
+  </section>
+
+  <footer class="cta">
+    <p class="eyebrow">Follow the series</p>
+    <h2>215 books to go</h2>
+    <p class="col">Every strategy we audit gets a file like this one, passed or not. Star the repo to follow along, and share it for <strong>10% off any OMA Quant product</strong> with the code <span class="code">OMAQUANT-10</span>.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/HMphysics/Strategies-OMA-Quant">⭐ Star the repo</a>
+      <a class="btn" href="https://www.omaquant.com/pricing?cupon=OMAQUANT-10">OMA Quant · 10% off</a>
+      <a class="btn" href="https://hmaquant.substack.com/s/216-quant-books">The series on Substack</a>
+      <a class="btn" href="https://x.com/_HMPhysics_">Follow @_HMPhysics_</a>
+    </div>
+    <p class="fine">Book: Daniel P. Palomar, <em>Portfolio Optimization: Theory and Application</em>, Cambridge University Press, 2025, free to read at <a href="https://portfoliooptimizationbook.com/">portfoliooptimizationbook.com</a>; pairs trading in sections 15.4.5 to 15.6, with this same pair. The book belongs to its author and publisher. This is educational content, not financial advice. Backtests, however rigorous, do not guarantee future returns.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>
