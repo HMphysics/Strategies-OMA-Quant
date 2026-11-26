@@ -66,7 +66,7 @@ Every strategy we audit gets a full file here: the idea, how it plays, the recor
 
 | Book | Author | Ideas tested | Passed the audit | Episode |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | in progress | – | [Episode 0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | in progress | – | [Episode 0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [Episode 1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) |
 
 <sub>216 books in total. Reading order: first the books that propose strategies directly, then the techniques, and the foundations last.</sub>
 
