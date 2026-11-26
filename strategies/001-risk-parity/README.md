@@ -4,7 +4,7 @@
 
 **Book 1 of 216** · Daniel P. Palomar, *Portfolio Optimization: Theory and Application* (Cambridge, 2025)
 
-**[📖 Full episode on Substack](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity)** · **[🧵 Thread on X](https://x.com/_HMPhysics_/status/2125950196953612547)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)** · **[🎟️ 10% off OMA Quant with OMAQUANT-10](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+**[📖 Full episode on Substack](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity)** · **[🧵 Thread on X](https://x.com/_HMPhysics_/status/2125956425252048905)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)** · **[🎟️ 10% off OMA Quant with OMAQUANT-10](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
 </div>
 
