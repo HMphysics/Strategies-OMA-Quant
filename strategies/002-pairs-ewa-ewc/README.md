@@ -4,7 +4,7 @@
 
 **216 Quant Books · Episode 2** · Book 1 of 216 · Daniel P. Palomar, *Portfolio Optimization: Theory and Application* (Cambridge, 2025)
 
-**[📚 The series on Substack](https://hmaquant.substack.com/s/216-quant-books)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)**
+**[📖 Full episode on Substack](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading)** · **[🧵 Thread on X](https://x.com/_HMPhysics_/status/2126250186712273359)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)**
 
 </div>
 

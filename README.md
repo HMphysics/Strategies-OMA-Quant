@@ -64,7 +64,7 @@ Passed or not, each one gets a full file: the idea, how it plays, the record, wh
 
 | Book | Author | Strategies audited | Passed | Episodes |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 2 so far | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 2 so far | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
 
 <sub>Reading order: first the books that propose strategies directly, then the techniques, and the foundations last.</sub>
 
@@ -147,7 +147,7 @@ Pasen o no, cada una tiene su ficha completa: la idea, cómo juega, los resultad
 
 | Libro | Autor | Estrategias auditadas | Pasan | Episodios |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 2 por ahora | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 2 por ahora | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
 
 <sub>Orden de lectura: primero los libros que proponen estrategias directas, luego las técnicas y al final los fundamentos.</sub>
 
