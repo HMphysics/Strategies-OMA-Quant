@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Risk Parity Trend · Strategy File 04</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans+Condensed:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* Layout: an audit dossier. One narrow reading column, figures break wider, a stamped verdict up top.
+   Single deliberate dark look (OMA navy + gold), every color set explicitly. */
+:root {
+  --ink: #0b1626;        /* page ground, OMA navy */
+  --panel: #101f34;      /* raised surfaces */
+  --line: #22344f;       /* hairlines */
+  --text: #e9edf2;
+  --muted: #93a3b8;
+  --gold: #c9a227;       /* accent: the strategy */
+  --pass: #2fae86;
+  --fail: #e5534b;
+  --mid: #f2c94c;        /* middle-ground verdict */
+  --display: "IBM Plex Sans Condensed", "Arial Narrow", system-ui, sans-serif;
+  --body: "IBM Plex Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--ink); color: var(--text); font: 400 1rem/1.65 var(--body); }
+.wrap { max-width: 1080px; margin: 0 auto; padding-block: 2.5rem 4rem;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px));
+  display: grid; gap: 3.5rem; }
+.col { max-width: 68ch; }
+a { color: var(--gold); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+h1, h2, h3 { font-family: var(--display); text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+h1 { font-size: clamp(2.2rem, 5.2vw, 3.6rem); line-height: 1.02; font-weight: 700; }
+h2 { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 600; }
+h3 { font-size: 1.15rem; font-weight: 600; }
+p { margin: 0; }
+.eyebrow { font: 500 0.78rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.12em; color: var(--muted); }
+.stack { display: grid; gap: 1rem; }
+
+/* hero */
+.hero { display: grid; gap: 1.4rem; }
+.hero-top { display: flex; flex-wrap: wrap; gap: 1rem 2rem; align-items: flex-start; justify-content: space-between; }
+.hero-top > div { min-width: 0; flex: 1 1 520px; display: grid; gap: 1rem; }
+.lede { font-size: 1.15rem; color: var(--muted); max-width: 60ch; }
+.stamp { flex: 0 0 auto; border: 2px solid var(--fail); color: var(--fail); padding: 0.7rem 1rem; transform: rotate(-3deg);
+  font: 600 0.8rem/1.35 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; text-align: center; }
+.stamp.mid { border-color: var(--mid); color: var(--mid); }
+.stamp b { display: block; font: 700 1.6rem/1.1 var(--display); letter-spacing: 0.08em; }
+.figures { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.fig { background: var(--panel); padding: 1rem 1.1rem; display: grid; gap: 0.2rem; }
+.fig .k { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); }
+.fig .v { font: 600 1.9rem/1.1 var(--display); font-variant-numeric: tabular-nums; }
+.fig .s { font-size: 0.85rem; color: var(--muted); }
+.gold { color: var(--gold); }
+
+/* figures */
+figure { margin: 0; display: grid; gap: 0.6rem; }
+figure img { width: 100%; height: auto; display: block; border: 1px solid var(--line); }
+figcaption { font-size: 0.88rem; color: var(--muted); max-width: 72ch; }
+.two { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem; align-items: start; }
+.two > * { min-width: 0; }
+
+/* table */
+.tablebox { overflow-x: auto; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; min-width: 640px; font-variant-numeric: tabular-nums; }
+th, td { padding: 0.6rem 0.8rem; text-align: right; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child, td:first-child { text-align: left; }
+thead th { font: 500 0.72rem/1.3 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); background: var(--panel); }
+tbody tr:last-child td { border-bottom: 0; }
+tr.us td { color: var(--gold); font-weight: 600; }
+td.grp { border-left: 1px solid var(--line); }
+
+/* pros/cons */
+.ledger { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
+.ledger section { border-top: 3px solid var(--pass); padding-top: 1rem; display: grid; gap: 0.8rem; min-width: 0; }
+.ledger section.bad { border-top-color: var(--fail); }
+.ledger ul { margin: 0; padding-left: 1.1rem; display: grid; gap: 0.6rem; }
+
+/* engine list */
+.checks { display: grid; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+.checks li { display: grid; grid-template-columns: 4.5rem 1fr; gap: 0.8rem; align-items: baseline; padding: 0.55rem 0; border-bottom: 1px solid var(--line); }
+.tag { font: 600 0.7rem/1.4 var(--mono); text-transform: uppercase; letter-spacing: 0.08em; padding: 0.15rem 0.4rem; text-align: center; }
+.tag.f { color: var(--fail); border: 1px solid var(--fail); }
+.tag.p { color: var(--pass); border: 1px solid var(--pass); }
+
+/* verdict */
+.verdict { border: 1px solid var(--line); background: var(--panel); padding: 1.6rem; display: grid; gap: 1rem; }
+.verdict h2 { color: var(--gold); }
+.verdict-head { display: flex; flex-wrap: wrap; gap: 1.2rem 2rem; align-items: center; justify-content: space-between; }
+.verdict-head > .stack { flex: 1 1 420px; min-width: 0; }
+
+/* cta */
+.cta { display: grid; gap: 1rem; border-top: 1px solid var(--line); padding-top: 2rem; }
+.btns { display: flex; flex-wrap: wrap; gap: 0.8rem; }
+.btn { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.7rem 1.1rem; border: 1px solid var(--gold); color: var(--text); text-decoration: none; font-weight: 600; }
+.btn.primary { background: var(--gold); color: var(--ink); }
+.code { font: 600 1rem var(--mono); color: var(--gold); letter-spacing: 0.06em; }
+.fine { font-size: 0.8rem; color: var(--muted); max-width: 80ch; }
+@media (prefers-reduced-motion: no-preference) { .stamp { transition: transform .3s; } .stamp:hover { transform: rotate(0deg); } }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">216 Quant Books · Episode 4 · Book 1 · Strategy 4 · variants of <a href="../001-risk-parity/report.html">strategy 1</a></p>
+    <div class="hero-top">
+      <div>
+        <h1>Risk parity with a 12-month trend filter</h1>
+        <p class="lede">Strategy 1 split the risk evenly across eight asset classes. Here every asset also has to be in an uptrend to stay in the portfolio, and what isn't goes to cash.</p>
+      </div>
+    </div>
+    <div class="figures">
+      <div class="fig"><span class="k">Max drawdown (v2)</span><span class="v gold">−11.6%</span><span class="s">strategy 1 −20.3% · SPY −51.5%</span></div>
+      <div class="fig"><span class="k">Sharpe (v2)</span><span class="v gold">0.52</span><span class="s">strategy 1 0.46 · SPY 0.59</span></div>
+      <div class="fig"><span class="k">Calmar (v2)</span><span class="v">0.35</span><span class="s">strategy 1 0.23 · SPY 0.23</span></div>
+      <div class="fig"><span class="k">Deflated Sharpe</span><span class="v">0.97</span><span class="s">counting 86 attempts</span></div>
+    </div>
+    <p class="fine">Sample 3 March 2008 to 31 December 2025, same eight ETFs as strategy 1, monthly, long only, no leverage, 10 bp per side. Same engine and costs for every line.</p>
+  </header>
+
+  <section class="stack">
+    <p class="eyebrow">How it plays</p>
+    <h2>Only hold what is going up</h2>
+    <div class="col stack">
+      <p>Every month each ETF has to beat the T-bill over the last twelve months. That's absolute momentum, the oldest rule in tactical allocation. We tested two ways of using it:</p>
+      <p><strong>v1, spread over the survivors:</strong> risk parity only among the assets that pass; if none pass, all cash. <strong>v2, cash per asset:</strong> risk parity across all eight as before, and each asset that fails hands its slice to cash.</p>
+    </div>
+    <div class="two">
+      <figure>
+        <img src="img/tendencia.gif" alt="Animation of the v2 weights, including cash, month by month, next to the growth of one dollar against strategy 1" width="960" height="540" loading="lazy">
+        <figcaption>The v2 month by month: in 2008 and 2022 most of the portfolio moves to cash.</figcaption>
+      </figure>
+      <figure>
+        <img src="img/03_liquidez.png" alt="Stacked area chart of the v2 capital weights and the cash share over time" width="1200" height="675" loading="lazy">
+        <figcaption>Weights and cash through time. About a third in T-bills on average.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <section class="stack">
+    <p class="eyebrow">The record</p>
+    <h2>The filter halves the worst fall</h2>
+    <figure>
+      <img src="img/01_curvas.png" alt="Log chart of the growth of one dollar for SPY, strategy 1 and both trend-filter versions" width="1200" height="675" loading="lazy">
+      <figcaption>Growth of 1, log scale. The shaded strip is 2026: data that played no part in designing anything.</figcaption>
+    </figure>
+    <div class="tablebox">
+      <table>
+        <thead>
+          <tr><th scope="col">Version</th><th scope="col">Sharpe</th><th scope="col">CAGR</th><th scope="col">Vol</th><th scope="col">Max DD</th><th scope="col">Calmar</th><th scope="col" class="grp">2026 Sharpe</th></tr>
+        </thead>
+        <tbody>
+          <tr class="us"><td>v2: cash per asset</td><td>0.52</td><td>4.1%</td><td>5.6%</td><td>−11.6%</td><td>0.35</td><td class="grp">1.23</td></tr>
+          <tr><td>v1: spread over survivors</td><td>0.30</td><td>3.9%</td><td>10.2%</td><td>−32.8%</td><td>0.12</td><td class="grp">1.12</td></tr>
+          <tr><td>Strategy 1, no filter</td><td>0.46</td><td>4.6%</td><td>7.8%</td><td>−20.3%</td><td>0.23</td><td class="grp">0.77</td></tr>
+          <tr><td>SPY, buy and hold</td><td>0.59</td><td>11.7%</td><td>19.9%</td><td>−51.5%</td><td>0.23</td><td class="grp">0.98</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="fine">2008–2025 sample unless marked. Calmar = CAGR / |max drawdown|. 2026 runs from January to October.</p>
+    <figure>
+      <img src="img/02_drawdowns.png" alt="Drawdown chart of SPY, strategy 1 and the v2" width="1200" height="675" loading="lazy">
+      <figcaption>−12% at worst against −20% for strategy 1 and −51% for SPY.</figcaption>
+    </figure>
+    <div class="col stack">
+      <p>The v1 is the warning. When only one or two assets pass, "risk parity among the survivors" puts the whole portfolio on them. In 2022, with bonds falling too, that made it worse than having no filter at all.</p>
+    </div>
+    <figure>
+      <img src="img/04_concentracion.png" alt="Bar chart of how many assets the v1 holds each month, highlighting months with only one or two" width="1200" height="675" loading="lazy">
+      <figcaption>Months where the v1 was left with one or two assets, in red.</figcaption>
+    </figure>
+  </section>
+
+  <section class="stack">
+    <p class="eyebrow">What the engine checked</p>
+    <h2>58 checks, frozen before the run</h2>
+    <div class="col stack">
+      <p>This idea came after seeing strategy 1, and the v2 after seeing the v1. YGGDRASIL counts all of it: the deflated Sharpe is computed against 86 attempts, so the bar is higher than for any strategy so far.</p>
+    </div>
+    <div class="two">
+      <figure>
+        <img src="img/05_motor.png" alt="Bar chart of passed and failed checks per audit block for the v2" width="1200" height="675" loading="lazy">
+        <figcaption>4 hard fails in the v2, down from 10 in the v1.</figcaption>
+      </figure>
+      <ul class="checks">
+        <li><span class="tag p">pass</span><span><strong>Deflated Sharpe 0.97</strong> with 86 attempts counted: the improvement is not luck.</span></li>
+        <li><span class="tag p">pass</span><span><strong>Execution stress.</strong> Costs ×5: 0.41. A day late: 0.52.</span></li>
+        <li><span class="tag p">pass</span><span><strong>Alpha +2.2% a year,</strong> beta 0.06, worst quarter −5.5%.</span></li>
+        <li><span class="tag f">fail</span><span><strong>Sharpe 0.52 against a bar of 0.8,</strong> and below SPY's 0.59.</span></li>
+        <li><span class="tag f">fail</span><span><strong>Timing</strong> (p = 0.16) and <strong>concentration:</strong> without its five best trades the Sharpe falls to 0.13.</span></li>
+        <li><span class="tag f">fail</span><span><strong>Overfitting probability 0.82:</strong> the best look-back changes from period to period.</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="ledger" aria-label="Strengths and weaknesses">
+    <section>
+      <h3>What it does well</h3>
+      <ul>
+        <li>Cuts the worst fall from −20% to −12%; worst quarter −5.5%.</li>
+        <li>More return per point of drawdown than strategy 1 and the S&amp;P 500.</li>
+        <li>Robust to costs and delays; almost no exposure to the stock market.</li>
+        <li>A strong 2026 so far on unseen data.</li>
+      </ul>
+    </section>
+    <section class="bad">
+      <h3>Where it falls short</h3>
+      <ul>
+        <li>About 4% a year: the filter protects, it doesn't add return.</li>
+        <li>Sharpe still well below our bar and below SPY.</li>
+        <li>A handful of good trades carry much of the record.</li>
+        <li>Done the wrong way (v1), the same filter concentrates and hurts.</li>
+      </ul>
+    </section>
+  </section>
+
+  <section class="verdict">
+    <div class="verdict-head">
+      <div class="stack">
+        <p class="eyebrow">The verdict</p>
+        <h2>A middle-ground strategy.</h2>
+      </div>
+      <div class="stamp mid" aria-label="Verdict: middle ground, below the YGGDRASIL bar">Audited by YGGDRASIL<b>Middle ground</b>below the bar · strategy 4</div>
+    </div>
+    <p>The trend filter, done the right way, does exactly what you'd want from it: it cuts the worst fall nearly in half, earns more per point of drawdown than the S&amp;P 500, and survives costs and delays. It's the best version of risk parity in the series so far.</p>
+    <p>It doesn't clear YGGDRASIL's bar, and it can't turn a calm 4%-a-year portfolio into a high-Sharpe strategy. Worth knowing and worth studying, not quite worth our capital.</p>
+  </section>
+
+  <footer class="cta">
+    <p class="eyebrow">Follow the series</p>
+    <h2>215 books to go</h2>
+    <p class="col">Every strategy we audit gets a file like this one, passed or not. Parent strategy: <a href="../001-risk-parity/report.html">strategy 1, risk parity</a>. Star the repo to follow along, and share it for <strong>10% off any OMA Quant product</strong> with the code <span class="code">OMAQUANT-10</span>.</p>
+    <div class="btns">
+      <a class="btn primary" href="https://github.com/HMphysics/Strategies-OMA-Quant">⭐ Star the repo</a>
+      <a class="btn" href="https://www.omaquant.com/pricing?cupon=OMAQUANT-10">OMA Quant · 10% off</a>
+      <a class="btn" href="https://hmaquant.substack.com/s/216-quant-books">The series on Substack</a>
+      <a class="btn" href="https://x.com/_HMPhysics_">Follow @_HMPhysics_</a>
+    </div>
+    <p class="fine">Variants of strategy 1 (Daniel P. Palomar, <em>Portfolio Optimization: Theory and Application</em>, Cambridge University Press, 2025). The 12-month absolute momentum filter follows Antonacci and Faber. This is educational content, not financial advice. Backtests, however rigorous, do not guarantee future returns.</p>
+  </footer>
+
+</div>
+
+</body>
+</html>

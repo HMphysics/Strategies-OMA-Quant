@@ -60,12 +60,14 @@ Passed or not, each one gets a full file: the idea, how it plays, the record, wh
 | 1 | Risk parity across eight asset classes | Palomar, *Portfolio Optimization* (2025) | Not accepted | [open](strategies/001-risk-parity) |
 | 2 | Pairs trading Australia against Canada (EWA/EWC) | Palomar, *Portfolio Optimization* (2025) | 🟡 Middle ground | [open](strategies/002-pairs-ewa-ewc) |
 | 3 | Momentum across the Nasdaq-100 | Palomar, *Portfolio Optimization* (2025) | Not accepted | [open](strategies/003-momentum-ndx) |
+| 4 | Risk parity with a 12-month trend filter · variants of [1](strategies/001-risk-parity) | Palomar, *Portfolio Optimization* (2025) | 🟡 Middle ground | [open](strategies/004-risk-parity-trend) |
+| 5 | The pairs rulebook on three new pairs · variants of [2](strategies/002-pairs-ewa-ewc) | Palomar, *Portfolio Optimization* (2025) | Not accepted | [open](strategies/005-pairs-variants) |
 
 ### 📖 Series progress
 
 | Book | Author | Strategies audited | Passed | Episodes |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 3 so far | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 5 so far | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
 
 <sub>Reading order: first the books that propose strategies directly, then the techniques, and the foundations last.</sub>
 
@@ -144,12 +146,14 @@ Pasen o no, cada una tiene su ficha completa: la idea, cómo juega, los resultad
 | 1 | Risk parity sobre ocho clases de activo | Palomar, *Portfolio Optimization* (2025) | No aceptada | [abrir](strategies/001-risk-parity) |
 | 2 | Pairs trading Australia contra Canadá (EWA/EWC) | Palomar, *Portfolio Optimization* (2025) | 🟡 Media | [abrir](strategies/002-pairs-ewa-ewc) |
 | 3 | Momentum en el Nasdaq-100 | Palomar, *Portfolio Optimization* (2025) | No aceptada | [abrir](strategies/003-momentum-ndx) |
+| 4 | Risk parity con filtro de tendencia de 12 meses · variantes de la [1](strategies/001-risk-parity) | Palomar, *Portfolio Optimization* (2025) | 🟡 Media | [abrir](strategies/004-risk-parity-trend) |
+| 5 | Las reglas de pares en tres pares nuevos · variantes de la [2](strategies/002-pairs-ewa-ewc) | Palomar, *Portfolio Optimization* (2025) | No aceptada | [abrir](strategies/005-pairs-variants) |
 
 ### 📖 Progreso de la serie
 
 | Libro | Autor | Estrategias auditadas | Pasan | Episodios |
 |:-:|---|:-:|:-:|:-:|
-| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 3 por ahora | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
+| 1 · *Portfolio Optimization: Theory and Application* | Daniel P. Palomar | 5 por ahora | – | [0](https://hmaquant.substack.com/p/216-quant-books-episode-0-reading) · [1](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity) · [2](https://hmaquant.substack.com/p/216-quant-books-episode-2-pairs-trading) |
 
 <sub>Orden de lectura: primero los libros que proponen estrategias directas, luego las técnicas y al final los fundamentos.</sub>
 

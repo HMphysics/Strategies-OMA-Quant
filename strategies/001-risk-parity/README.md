@@ -69,6 +69,8 @@ YGGDRASIL runs the same 58 checks on every strategy, with thresholds frozen befo
 - Probability of backtest overfitting 0.46: the best look-back window doesn't carry from one period to the next.
 - Shuffling the weights doesn't hurt it: the returns come from what it holds, not from when it moves.
 
+> **➕ Follow-up:** [Strategy 4 · Risk parity with a 12-month trend filter](../004-risk-parity-trend) tests the same portfolio with a trend filter that moves to cash.
+
 ## The verdict
 
 **Rejected by YGGDRASIL, and we agree.**

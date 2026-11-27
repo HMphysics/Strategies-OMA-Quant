@@ -73,6 +73,8 @@ YGGDRASIL runs the same 58 checks on every strategy, with thresholds frozen befo
 - Probability of backtest overfitting 0.54 to 0.64: a two-year hedge window works, one or three years don't (Sharpe 0.36 and 0.39).
 - Long dead spells. Worst rolling year 2013, a rolling-year Sharpe below zero for 356 sessions in a row, and 2026 so far is flat (Sharpe 0.17).
 
+> **➕ Follow-up:** [Strategy 5 · The pairs rulebook on three new pairs](../005-pairs-variants) runs these exact rules on gold/silver, gold/miners and WTI/Brent.
+
 ## The verdict
 
 **A middle-ground strategy. It doesn't clear YGGDRASIL's bar and it doesn't convince us, but it isn't a bad strategy either.**
