@@ -4,7 +4,7 @@
 
 **Book 1 of 216** · Daniel P. Palomar, *Portfolio Optimization: Theory and Application* (Cambridge, 2025)
 
-**[📖 Full episode on Substack](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity)** · **[🧵 Thread on X](https://x.com/_HMPhysics_/status/2125956425252048905)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)** · **[🎟️ 10% off OMA Quant with OMAQUANT-10](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+**[📖 Full episode on Substack](https://hmaquant.substack.com/p/216-quant-books-episode-1-risk-parity)** · **[🧵 Thread on X](https://x.com/_HMPhysics_/status/2125956425252048905)** · **[𝕏 @_HMPhysics_](https://x.com/_HMPhysics_)**
 
 </div>
 
@@ -99,7 +99,15 @@ A good way to hold a portfolio for someone who can't sit through a −50% year: 
 
 <div align="center">
 
-⭐ **[Star the repo](https://github.com/HMphysics/Strategies-OMA-Quant)** to follow the 216 books · 🎟️ **`OMAQUANT-10`** → **[10% off OMA Quant](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
+**🌳 About YGGDRASIL and OMA Quant**
+
+YGGDRASIL is the audit engine behind this series: the verdict is sealed before the backtest, every strategy faces 58 checks, and every attempt raises the bar.
+It's built by **[OMA Quant](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**, a quantitative research house for independent investors: live strategy signals, macro and derivatives research, market data and research tools.
+Run the same engine on your own strategies with **[OMA Lab](https://www.omaquant.com/lab?cupon=OMAQUANT-10)**.
+
+*YGGDRASIL es el motor de auditoría de esta serie: el veredicto se sella antes del backtest, cada estrategia pasa 58 comprobaciones y cada intento sube el listón. Lo construye [OMA Quant](https://www.omaquant.com/pricing?cupon=OMAQUANT-10), una casa de research cuantitativo para inversores independientes.*
+
+⭐ **[Star the repo](https://github.com/HMphysics/Strategies-OMA-Quant)** to follow the 216 books · If it's useful, share it: **`OMAQUANT-10`** gives you **[10% off OMA Quant](https://www.omaquant.com/pricing?cupon=OMAQUANT-10)**
 
 </div>
 
